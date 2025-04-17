@@ -35,6 +35,25 @@ npm install
 cd ..
 ```
 
+## API Key Setup
+
+This application uses the WordsAPI from RapidAPI for word validation. To set up your API key:
+
+1. Sign up for a free account at [RapidAPI](https://rapidapi.com/signup)
+2. Subscribe to [WordsAPI](https://rapidapi.com/dpventures/api/wordsapi) (there's a free tier available)
+3. Get your API key from RapidAPI
+4. Create a `.env` file in the root directory:
+
+```bash
+touch .env
+```
+
+5. Add your API key to the `.env` file:
+
+```
+RAPID_API_KEY=your_api_key_here
+```
+
 ## Running the Application
 
 ### Development Mode
@@ -63,31 +82,6 @@ To run just the frontend development server:
 ```bash
 npm run client
 ```
-
-## Deployment
-
-The application is configured for deployment to GitHub Pages. To deploy:
-
-1. Make sure you have committed all changes:
-
-```bash
-git add .
-git commit -m "Your commit message"
-```
-
-2. Deploy to GitHub Pages:
-
-```bash
-npm run deploy
-```
-
-This will:
-
-- Build the React application
-- Create a gh-pages branch
-- Deploy the built files to GitHub Pages
-
-Your application will be available at: `https://your-username.github.io/wordle-clone/`
 
 ## Project Structure
 

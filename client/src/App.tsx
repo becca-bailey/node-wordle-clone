@@ -1,5 +1,6 @@
 import {useState, useEffect, useCallback, useRef} from "react";
 import "./App.css";
+import config from "./config";
 
 function App() {
   const [targetWord, setTargetWord] = useState<string>("");
@@ -26,7 +27,7 @@ function App() {
   const fetchWord = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/random-word");
+      const response = await fetch(`${config.apiUrl}/api/random-word`);
       const data = await response.json();
       setTargetWord(data.word.toLowerCase());
       setGuesses([]);
@@ -53,7 +54,7 @@ function App() {
   const validateWord = useCallback(async (word: string) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/validate-word/${word}`
+        `${config.apiUrl}/api/validate-word/${word}`
       );
       const data = await response.json();
       return data.isValid;

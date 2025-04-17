@@ -9,8 +9,6 @@
     "server": "node server.mjs",
     "client": "cd client && npm run dev",
     "build": "cd client && npm run build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d client/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,8 +21,6 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "gh-pages": "^6.3.0",
-    "nodemon": "^3.1.9"
+    "concurrently": "^8.2.2"
   }
 }
